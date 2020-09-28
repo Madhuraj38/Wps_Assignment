@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Event Calender</title>
+        <script src="script.js" async=""></script>
+        <style>
+            #calendar{
+                width: 80%;
+                margin-top: 60px;
+                margin-left: 10%;
+            }
+            .calendartable{
+                width: 100%;
+                border:1px solid black;
+            }
+            .calendartable thead tr th{
+                background:skyblue;
+                border-bottom: 1px solid black;
+                padding: 20px 0px;
+                color:white;
+            }
+            .calendartable tbody tr td{
+                text-align: center;
+                padding: 20px 0px;
+                border: 1px solid #ccc;
+                cursor: pointer;
+                background: #dadada;
+            }
+            .calendarbtns{
+                padding: 6px 12px;
+                width:100%;
+            }
+            .calendarbtns button{
+                padding: 6px 12px;
+                font-size: 18px;
+                border-radius: 6px;
+                cursor: pointer;
+            }
+            .calendardiv{
+                display: none;
+            }
+            #calendardiv{
+                display:block;
+            }
+            #calendarTable_1{
+                display: block;
+            }
+            #stu{
+                float: right;
+            }
+            #form
+{
+    position: absolute;
+    display: none;
+    width: 30%;
+    right: 0px;
+    top: 0px;
+    height: 100%;
+    transition: 2s;
+    background-color: white;
+}
+
+#event
+{
+   height: 50%;
+   margin-top: 40%;
+   margin-left: 5px;
+   text-align: center;
+   border-radius: 10px;
+   color: black;
+}
+        </style>
+    </head>
+    <body>
+        <div id="stu">
+            <input type="button" onclick="status()" value="student">
+            <input type="button"  value="Dashboard">
+        </div>
+        <div id="form">
+            <a href="javascript:void(0)"   id="closebutton"   onclick='document.getElementById("form").style.display = "none"' >Close</a>
+            <div id="event">
+                <input type="radio" value="completed"><br>
+                <input type="radio" value="pending"><br>
+                <input type="radio" value="upcoming"><br>
+                <input type="radio" value="high priority"><br>
+            </div>
+        </div>
+        <div id="calendar"></div>
+        
+    </body>
+</html>
