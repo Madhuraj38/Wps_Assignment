@@ -48,33 +48,27 @@
             #stu{
                 float: right;
             }
-            #form
-{
-    position: absolute;
-    display: none;
-    width: 30%;
-    right: 0px;
-    top: 0px;
-    height: 100%;
-    transition: 2s;
-    background-color: white;
-}
-
-#event
-{
-   height: 50%;
-   margin-top: 40%;
-   margin-left: 5px;
-   text-align: center;
-   border-radius: 10px;
-   color: black;
-}
+            #form{
+                position: absolute;
+                display: none;
+                width: 30%;
+                right: 0px;
+                top: 0px;
+                height: 100%;
+                background-color: rgb(233, 15, 26);
+            }
+            #event{
+                height: 50%;
+                text-align: center;
+                border-radius: 10px;
+                color: black;
+            }
         </style>
     </head>
     <body>
         <div id="stu">
             <input type="button" onclick="status()" value="student">
-            <input type="button"  value="Dashboard">
+            <input type="button" onclick="dash()" value="Dashboard">
         </div>
         <div id="form">
             <a href="javascript:void(0)"   id="closebutton"   onclick='document.getElementById("form").style.display = "none"' >Close</a>
@@ -84,6 +78,7 @@
                 <input type="radio" value="upcoming"><br>
                 <input type="radio" value="high priority"><br>
             </div>
+            <div id="demo"></div>
         </div>
         <div id="calendar"></div>
         
