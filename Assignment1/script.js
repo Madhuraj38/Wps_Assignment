@@ -1,5 +1,5 @@
 let calendarshow = 1;
-
+var x;
 function settingDate(date, day) {
     date = new Date(date);
     date.setDate(day);//Set the day of the month
@@ -156,6 +156,19 @@ function askevent(num, id) {
 }
 function status(){
     document.getElementById("form").style.display = "block";
+}
+function sub(){
+    var v = document.getElementsByName(`fill`);
+    for(k = 0; k < v.length; k++) { 
+        if(v[k].checked){
+            x=v[k].value;
+        }
+    }
+}
+function dash(){
+    document.getElementById("form").style.display = "block";
+    document.getElementById("event").style.display = "none";
+    document.getElementById("demo").innerHTML = "<h3>"+x+"</h3>";
 }
 
 let content = getDatesBetween("2020/01/01", "2021/01/01");
